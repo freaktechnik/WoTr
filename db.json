@@ -1,0 +1,11 @@
+{ "db": [
+	{ "de":"a?",
+	  "fr":"franz",
+	  "image":"placeholder"
+	},
+	{ "de":"b?",
+	  "fr":"franz01",
+	  "image":"image01"
+	}
+	]
+}
