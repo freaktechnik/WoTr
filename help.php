@@ -8,15 +8,15 @@
     WoTr - Help
     </title>
 	<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
-	<script src="jquery-1.5.min.js" type="text/javascript"></script>
+	<script src="jquery-1.5.1.min.js" type="text/javascript"></script>
 	<script src="cookies.js" type="text/javascript"></script>
     <script type="text/javascript">
 	var loca = location.host;
 	var locb = location.pathname;
 	var protocol = location.protocol;
 	if(locb.match("/+[a-z]+.php$")) {
-		var k = locb.match("/+[a-z]+.php$");
-		locb = locb.replace(k, "");
+		var temp = locb.match("/+[a-z]+.php$");
+		locb = locb.replace(temp, "");
 	}
 	var url = protocol+loca+locb+"/";
 	var username = GetCookie("uname");
@@ -51,6 +51,7 @@
 	</style>
 </head>
 <body>
+  <div id="wrapper">
 	<div id="nav">
 		<table id="navtbl">
 			<tr>
@@ -64,19 +65,20 @@
 			</tr>
 		</table>
 	</div>
+	<div id="navspacer"></div>
 	<div id="content">
 		<b>Help</b><br/>
 		At the moment, there is only a <a href="roadmap.php">Roadmap</a>.
 	</div>
+	<div id="footspacer"></div>
 	<div id="footer">
-		WoTr V0.1 &copy; <?php
-	echo date("Y");
-?> by Martin Giger
+	<?php include("version.php"); ?> 
 	<table id="htable">
 		<tr>
 			<td class="actual"><a href="help.php">Help</a></td>
 		</tr>
 	</table>
+	</div>
 	</div>
 </body>
 </html>

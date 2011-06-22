@@ -2,12 +2,12 @@
 	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr" xml:lang="de">
   <head>
-    <meta name="generator" content="HTML Tidy for Windows (vers 14 February 2006), see www.w3.org"/>	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="HTML Tidy for Windows (vers 14 February 2006), see www.w3.org"/>	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>
     WoTr - Login
     </title>
 	<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
-	<script src="jquery-1.5.min.js" type="text/javascript"></script>
+	<script src="jquery-1.5.1.min.js" type="text/javascript"></script>
 	<script src="cookies.js" type="text/javascript"></script>
 	<script src="login.js" type="text/javascript"></script>
 <style type="text/css">
@@ -20,6 +20,7 @@
 </style>
 </head>
 <body>
+  <div id="wrapper">
 	<div id="nav">
 		<table id="navtbl">
 			<tr>
@@ -33,6 +34,7 @@
 			</tr>
 		</table>
 	</div>
+	<div id="navspacer"></div>
 	<div id="content">
 		<b>Protected area</b>
 		<form>
@@ -43,7 +45,9 @@
 		<div class="buttons" id="login">Login</div>
 		<div id="resultwrap"><span id="result">Please enable JavaScript</span></div>
 	</div>
-	<div id="footer">	WoTr V0.1 &copy; <?php	echo date("Y");?> by Martin Giger	<table id="htable">		<tr>			<td><a href="help.php">Help</a></td>		</tr>	</table>
+	<div id="footspacer"></div>
+	<div id="footer">	<?php include("version.php"); ?> 	<table id="htable">		<tr>			<td><a href="help.php">Help</a></td>		</tr>	</table>
+	</div>
 	</div>
 </body>
 </html>

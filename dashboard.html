@@ -17,7 +17,6 @@
 		<table id="navtbl">
 			<tr>
 				<td class="actual"><a href="index.php">Home</a></td>
-				<td><a href="javascript:write()">debug</a></td>
 			</tr>
 		</table>
 		<table id="usertbl">
@@ -27,18 +26,19 @@
 			</tr>
 		</table>
 	</div>
-	<table id="dashboard">
-		<tr>
-			<td>Testtest</td>
-		</tr>
-		<tr>
-			<td>Testtest | 32 | 00</td>
-		</tr>
-	</table>
+	<div id="dashboard">
+	<b>Dashboard</b>
+	<ul id="quescon">
+		<li>
+			<a href="franz.php">db (2/2)</a>
+		</li>
+		<li>
+			Testtest (32 /0)
+		</li>
+	</ul>
+	</div>
 	<div id="footer">
-		WoTr V0.1 &copy; <?php
-	echo date("Y");
-?> by Martin Giger
+	<?php include("version.php"); ?> 
 	<table id="htable">
 		<tr>
 			<td><a href="help.php">Help</a></td>

@@ -8,16 +8,21 @@
     WoTr
     </title>
 	<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
-	<script src="jquery-1.5.min.js" type="text/javascript"></script>
+	<script src="jquery-1.5.1.min.js" type="text/javascript"></script>
     <script src="franz.js" type="text/javascript"></script>
 	<script src="cookies.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	$(document).ready(function () {
+		initialize();
+	});
+	</script>
   </head>
   <body>
+    <div id="wrapper">
 	<div id="nav">
 		<table id="navtbl">
 			<tr>
-				<td class="actual"><a href="index.php">Home</a></td>
-				<td><a href="javascript:write()">debug</a></td>
+				<td><a href="index.php">Home</a></td>
 			</tr>
 		</table>
 		<table id="usertbl">
@@ -27,28 +32,27 @@
 			</tr>
 		</table>
 	</div>
+	<div id="navspacer"></div>
     <div id="content">
+		<b id="name"></b>
 		<div id="quescon">
-		<span id="state">empty</span>
 		<div id="germanwrap"><span id="german"></span></div>
 		<img src="" alt="" id="image" height="200" width="200" />
 		<div id="franzwrap"><span id="franz"></span></div>
 		</div>
-		<form>
 			<input type="text" id="textf" class="textf" value=""/>
-		</form>
 		<div id="next" class="buttons">></div>
-		<div id="resultwrap"><span id="result"></span></div>
+		<div id="resultwrap"><span id="result"></span><div id="tip">h</div></div>
 	</div>
+	<div id="footspacer"></div>
 	<div id="footer">
-		WoTr V0.1 &copy; <?php
-	echo date("Y");
-?> by Martin Giger
+		<?php include("version.php"); ?> 
 	<table id="htable">
 		<tr>
 			<td><a href="help.php">Help</a></td>
 		</tr>
 	</table>
+	</div>
 	</div>
   </body>
 </html>

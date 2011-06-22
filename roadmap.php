@@ -8,15 +8,15 @@
     WoTr - Roadmap
     </title>
 	<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
-	<script src="jquery-1.5.min.js" type="text/javascript"></script>
+	<script src="jquery-1.5.1.min.js" type="text/javascript"></script>
 	<script src="cookies.js" type="text/javascript"></script>
     <script type="text/javascript">
 	var loca = location.host;
 	var locb = location.pathname;
 	var protocol = location.protocol;
 	if(locb.match("/+[a-z]+.php$")) {
-		var k = locb.match("/+[a-z]+.php$");
-		locb = locb.replace(k, "");
+		var temp= locb.match("/+[a-z]+.php$");
+		locb = locb.replace(temp, "");
 	}
 	var url = protocol+loca+locb+"/";
 	var username = GetCookie("uname");
@@ -51,6 +51,7 @@
 	</style>
 </head>
 <body>
+<div id="wrapper">
 	<div id="nav">
 		<table id="navtbl">
 			<tr>
@@ -64,36 +65,41 @@
 			</tr>
 		</table>
 	</div>
+	<div id="navspacer"></div>
 	<div id="content">
 		<b>Roadmap</b>
 		<a href="help.php">Back to help</a>
 		<ul>
-			<li style="color:green;"style="color:green;">Save state of a word for a user & decide when you reach the next state</li>
 			<li style="color:darkorange;">logo (<a href="wotrlogo.php">Mockup</a>)</li>
-			<li>A dashboard</li>
-			<li>Different series of words</li>
 			<li>Write a help</li>
 			<li>Securer login (php looks up username & pw)</li>
 			<li>Cleanup JavaScript</li>
 			<li>Different languages</li>
+			<li>Make the hole system translateable</li>
 			<li>Word only mode</li>
-			<li>Let users enter word series</li>
-			<li>Fix help button (partially??)</li>
-			<li>Help if a word was x times wrong</li>
-			<li>Fix load (get rid of debug button)</li>
+			<li>Let users set the picture when entering a word series
+				<ul><li>Make suggestions for the picture (google image search)</li></ul>
+			</li>
+			<li style="color:darkorange;">Fix help button (partially??)</li>
+			<li>Socialize: Login with Facebook/Twitter and sharing</li>
+			<li>Replace tables with unordered lists. (in nav & footer?)</li>
+			<li>Fix enter for next word</li>
+			<li>Statistics</li>
+			<li style="color:darkorange;">When clicking on "Not logged in" open an overlay to login. <a href="error.php">Test it here</a>.</li>
+			<li>recaptcha at Registration</li>
 		</ul>
 		<span style="color:green;">green</span>: work in progress
-		<span style="color:darkorange;">orange</span>: bugged, but available
+		<span style="color:darkorange;">orange</span>: bugged, but preview availalbe
 	</div>
+	<div id="footspacer"></div>
 	<div id="footer">
-		WoTr V0.1 &copy; <?php
-	echo date("Y");
-?> by Martin Giger
+	<?php include("version.php"); ?> 
 	<table id="htable">
 		<tr>
 			<td><a href="help.php">Help</a></td>
 		</tr>
 	</table>
 	</div>
+</div>
 </body>
 </html>

@@ -8,8 +8,12 @@
 	WoTr - Error 401
     </title>
 	<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+	<script src="jquery-1.5.1.min.js" type="text/javascript"></script>
+	<script src="loginbox.js" type="text/javascript"></script>
+	<script src="cookies.js" type="text/javascript"></script>
   </head>
   <body>
+  <div id="wrapper">
 	<div id="nav">
 		<table id="navtbl">
 			<tr>
@@ -19,24 +23,23 @@
 		<table id="usertbl">
 			<tr>
 				<td><a href="register.php">Registration</a></td>
-				<td>Not logged in</td>
+				<td id="nli">Not logged in</td>
 			</tr>
 		</table>
 	</div>
+	<div id="navspacer"></div>
 	<div id="content">
 		<b>401 Access denied</b>
 	</div>
+	<div id="footspacer"></div>
 	<div id="footer">
-		&copy; <?php
-	$timestamp = time();
-	$datum = date("Y",$timestamp);
-	echo $datum;
-?> by Martin Giger
+	<?php include("version.php"); ?> 
 	<table id="htable">
 		<tr>
 			<td><a href="help.php">Help</a></td>
 		</tr>
 	</table>
 	</div>
+  </div>
   </body>
 </html>
